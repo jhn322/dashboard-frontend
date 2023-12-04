@@ -24,7 +24,7 @@ body {
 
 .dashboard-container {
     width: 1600px;
-    height: 800px;
+    height: 1000px;
     max-width: 1600px;
     border: 1px solid red;
     display: flex;
@@ -35,7 +35,7 @@ body {
 
 .dashboard-headline {
     font-size: 3.4rem;
-    margin-bottom: 4rem;
+    margin: 8rem 0 2rem 0;
 }
 
 .my-dashboard {
@@ -54,6 +54,7 @@ body {
     width: 600px;
     align-items: center;
     flex-direction: column;
+    background: linear-gradient(rgba(128, 128, 128, 0.3), rgba(128, 128, 128, 0.3));
 }
 
 .dash-element-headline-1 {
@@ -84,7 +85,7 @@ body {
     border-radius: 10px;
     width: 200px;
     height: 35px;
-    margin-top: 90px;
+    margin-top: 240px;
     border: none;
     cursor: pointer;
     background: linear-gradient(rgba(128, 128, 128, 0.3), rgba(128, 128, 128, 0.3));
