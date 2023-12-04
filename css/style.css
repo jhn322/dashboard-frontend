@@ -51,4 +51,21 @@ body {
     margin: 0 10px;
     height: 450px;
     width: 600px;
+    align-items: center;
+    flex-direction: column;
+}
+
+.dash-element-headline-1 {
+    margin-bottom: auto;
+}
+
+.dash-element-btn {
+    width: 140px;
+    height: 25px;
+    border-radius: 20px;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    margin-top: auto;
+    margin-bottom: 30px;
 }
