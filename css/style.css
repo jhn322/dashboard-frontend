@@ -8,12 +8,13 @@ body {
 }
 
 .clock-date-container {
-    border: 1px solid red;
     height: 25px;
     width: 280px;
     display: flex;
     justify-content: center;
     border-radius: 50px;
+    font-size: 0.8rem;
+    background: linear-gradient(rgba(128, 128, 128, 0.3), rgba(128, 128, 128, 0.3));
 }
 
 .clock-date {
@@ -61,11 +62,30 @@ body {
 
 .dash-element-btn {
     width: 140px;
-    height: 25px;
-    border-radius: 20px;
+    height: 30px;
+    border-radius: 10px;
     display: flex;
-    align-self: center;
     justify-content: center;
+    align-items: center;
     margin-top: auto;
     margin-bottom: 30px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(rgba(128, 128, 128, 0.3), rgba(128, 128, 128, 0.3));
+}
+
+.bg-btn-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.bg-btn {
+    border-radius: 10px;
+    width: 200px;
+    height: 35px;
+    margin-top: 90px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(rgba(128, 128, 128, 0.3), rgba(128, 128, 128, 0.3));
 }
