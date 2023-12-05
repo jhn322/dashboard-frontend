@@ -17,6 +17,7 @@ body {
     border-radius: 50px;
     font-size: 0.8rem;
     background: linear-gradient(rgba(128, 128, 128, 0.3), rgba(128, 128, 128, 0.3));
+    backdrop-filter: blur(10px);
 }
 
 .clock-date {
@@ -57,6 +58,7 @@ body {
     align-items: center;
     flex-direction: column;
     background: linear-gradient(rgba(128, 128, 128, 0.3), rgba(128, 128, 128, 0.3));
+    backdrop-filter: blur(10px);
 }
 
 .dash-element-headline-1 {
@@ -75,6 +77,7 @@ body {
     border: none;
     cursor: pointer;
     background: linear-gradient(rgba(128, 128, 128, 0.3), rgba(128, 128, 128, 0.3));
+    backdrop-filter: blur(10px);
 }
 
 .bg-btn-container {
@@ -91,4 +94,5 @@ body {
     border: none;
     cursor: pointer;
     background: linear-gradient(rgba(128, 128, 128, 0.3), rgba(128, 128, 128, 0.3));
+    backdrop-filter: blur(10px);
 }
