@@ -99,7 +99,9 @@ body {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   width: 9rem;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
+  width: 10rem;
+  height: 2.8rem;
   border-radius: 10px;
   display: flex;
   justify-content: center;
