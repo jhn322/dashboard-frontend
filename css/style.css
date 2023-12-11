@@ -6,16 +6,18 @@
   color: rgb(16, 16, 16);
 }
 
+/* Universal styling */
 body {
   display: flex;
   justify-content: center;
   font-family: "Montserrat", sans-serif;
   align-items: center;
-  height: 100vh;
+  height: auto;
   background-image: url("../images/test-bg.jpg");
   background-size: cover;
 }
 
+/* Container for the clock element */
 .clock-container {
   margin-top: 2rem;
   display: flex;
@@ -29,6 +31,7 @@ body {
   backdrop-filter: blur(10px);
 }
 
+/* Clock h3 container */
 .clock {
   display: flex;
   justify-content: center;
@@ -43,10 +46,9 @@ body {
   font-weight: 500;
 }
 
+/* Main container for all elements */
 .dashboard-container {
   width: 30rem;
-  height: 50rem;
-  /* max-width: 1000px; */
   border: 1px solid red;
   display: flex;
   flex-direction: column;
@@ -60,12 +62,12 @@ body {
 
 .my-dashboard {
   border: 1px solid green;
-  max-width: 1400px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
+/* Conatiner for the 4 dash elements */
 .dash-element {
   border: 1px solid cyan;
   font-family: "Montserrat", sans-serif;
@@ -85,6 +87,7 @@ body {
   backdrop-filter: blur(10px);
 }
 
+/* Font styling dash headlines */
 .dash-element-headline-1,
 .dash-element-headline-2,
 .dash-element-headline-3,
@@ -94,17 +97,18 @@ body {
   font-weight: 500;
 }
 
+/* Button for the quicklinks element */
 .dash-element-btn {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
-  width: 140px;
-  height: 30px;
+  width: 9rem;
+  height: 2.6rem;
   border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: auto;
-  margin-bottom: 30px;
+  margin-bottom: 1rem;
   border: none;
   cursor: pointer;
   background: linear-gradient(
@@ -114,12 +118,14 @@ body {
   backdrop-filter: blur(10px);
 }
 
+/* Container for the background button */
 .bg-btn-container {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
 }
 
+/* Styling for background button */
 .bg-btn {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
