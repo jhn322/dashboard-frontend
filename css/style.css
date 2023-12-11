@@ -157,7 +157,7 @@ body {
 }
 
 /* Tablet */
-@media (min-width: 900px) and (max-width: 1199px) {
+@media (min-width: 900px) and (max-width: 1399px) {
   .dashboard-headline {
     font-size: 3.6rem;
     margin: 4.5rem 0 2rem 0;
@@ -180,7 +180,7 @@ body {
 
   .dash-element {
     height: 35rem;
-    width: 28rem;
+    width: 24rem;
     margin-top: 0.2rem;
   }
 
@@ -195,7 +195,7 @@ body {
 }
 
 /* Desktop */
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
   .dashboard-headline {
     font-size: 4rem;
     margin: 8rem 0 2rem 0;
