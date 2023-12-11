@@ -70,15 +70,12 @@ body {
 /* Conatiner for the 4 dash elements */
 .dash-element {
   border: 1px solid cyan;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 300;
   border-radius: 20px;
   display: flex;
-  margin-top: 1.6rem;
+  margin-top: 1.2rem;
   height: 28rem;
   width: 22rem;
   align-items: center;
-  justify-content: space-between;
   flex-direction: column;
   background: linear-gradient(
     rgba(128, 128, 128, 0.3),
@@ -122,13 +119,13 @@ body {
 .bg-btn-container {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
 }
 
 /* Styling for background button */
 .bg-btn {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
+  font-size: 1rem;
   border-radius: 10px;
   width: 22rem;
   height: 3.2rem;
