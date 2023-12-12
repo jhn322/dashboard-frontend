@@ -22,7 +22,7 @@
 
 <body>
     <!-- Container for the dashboard UI -->
-    <article class="dashboard-container">
+    <div class="dashboard-container">
 
         <!-- Clock and date with API -->
         <aside class="clock-container">
@@ -34,30 +34,31 @@
         <!-- User input headline -->
         <h1 class="dashboard-headline">Dashboard</h1>
         <!-- Dashboard elements -->
-        <div class="my-dashboard">
-            <div class="dash-element dash-element-1">
+        <section class="the-dashboard">
+            <article class="dash-element dash-element-1">
                 <h2 class="dash-element-headline-1">Quick links</h2>
                 <button class="dash-element-btn"><i class="fa-solid fa-circle-plus"></i>Add more links</button>
-            </div>
+            </article>
 
-            <div class="dash-element dash-element-2">
+            <article class="dash-element dash-element-2">
                 <h2 class="dash-element-headline-2">Today's Weather</h2>
-            </div>
+            </article>
 
-            <div class="dash-element dash-element-3">
+            <article class="dash-element dash-element-3">
                 <h2 class="dash-element-headline-3">Choose an API</h2>
-            </div>
+            </article>
 
-            <div class="dash-element dash-element-4">
+            <article class="dash-element dash-element-4">
                 <h2 class="dash-element-headline-4">Notes</h2>
-            </div>
-        </div>
+            </article>
+        </section>
 
         <!-- Button for generating random wallpapers from Unsplash -->
-        <section class="bg-btn-container">
+        <aside class="bg-btn-container">
             <button class="bg-btn"><i class="fa-solid fa-arrow-rotate-right"></i>Randomize Background</button>
-        </section>
-    </article>
+        </aside>
+    </div>
+
 </body>
 
 </html>

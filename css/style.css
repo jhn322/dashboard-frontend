@@ -60,7 +60,7 @@ body {
   margin: 3rem 0 1.5rem 0;
 }
 
-.my-dashboard {
+.the-dashboard {
   border: 1px solid green;
   display: flex;
   flex-direction: column;
@@ -173,7 +173,7 @@ body {
   }
 
   /* Grid to achieve the 2x2 dashboard layout */
-  .my-dashboard {
+  .the-dashboard {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
@@ -218,7 +218,7 @@ body {
   }
 
   /* Specified max-width */
-  .my-dashboard {
+  .the-dashboard {
     max-width: 120rem;
     display: flex;
     flex-direction: row;
