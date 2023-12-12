@@ -203,7 +203,7 @@ body {
   /* Bigger font & margins */
   .dashboard-headline {
     font-size: 4rem;
-    margin: 8rem 0 2rem 0;
+    margin: 6rem 0 2rem 0;
   }
 
   /* Adjustsed width height */
@@ -244,7 +244,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    margin-top: 6rem;
+    margin-top: 3rem;
   }
 
   /* Touch friendly not needed, thinner button  */
@@ -252,6 +252,5 @@ body {
     width: 16rem;
     height: 2.2rem;
     font-size: 0.9rem;
-    margin-top: 240px;
   }
 }
