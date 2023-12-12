@@ -60,12 +60,11 @@ body {
 }
 
 .dashboard-headline {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin: 3rem 0 1.5rem 0;
 }
 
 #userSpecificHeadline {
-  display: flex;
   text-align: center;
 }
 
