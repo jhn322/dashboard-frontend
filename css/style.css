@@ -41,9 +41,12 @@ body {
   font-size: 1.1rem;
 }
 
-.timeDate-h3 {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
+.time-h3 {
+  font-weight: 700;
+}
+
+.date-p {
+  margin-left: 1rem;
 }
 
 /* Main container for all elements */

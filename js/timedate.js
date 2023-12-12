@@ -21,7 +21,7 @@ const updateClock = () => {
 
   // Format the time and date strings
   const formatTime = `${hours}:${minutes}:${seconds}`;
-  const formatDate = `${day}:${month}:${year}`;
+  const formatDate = `${day}/${month}/${year}`;
 
   // Updates the time and date with the new format
   timeH3.textContent = formatTime;
