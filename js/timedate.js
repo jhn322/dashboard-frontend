@@ -18,4 +18,18 @@ const updateClock = () => {
   const day = String(currentTime.getDate()).padStart(2, "0");
   const month = String(currentTime.getMonth() + 1).padStart(2, "0");
   const year = currentTime.getFullYear();
+
+  // Format the time and date strings
+  const formatTime = `${hours}:${minutes}:${seconds}`;
+  const formatDate = `${day}:${month}:${year}`;
+
+  // Updates the time and date with the new format
+  timeH3.textContent = formatTime;
+  dateP.textContent = formatDate;
 };
+
+// Updates the time and date every second
+setInterval(updateClock, 1000);
+
+// Runs the function immediately when page loads
+updateClock();
