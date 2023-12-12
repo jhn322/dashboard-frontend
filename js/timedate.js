@@ -14,14 +14,37 @@ const updateClock = () => {
   const minutes = String(currentTime.getMinutes()).padStart(2, "0");
   const seconds = String(currentTime.getSeconds()).padStart(2, "0");
 
-  // Get the current day, month and year.
+  // Get the current day
   const day = String(currentTime.getDate()).padStart(2, "0");
-  const month = String(currentTime.getMonth() + 1).padStart(2, "0");
+
+  // Get the months index from current date
+  const monthIndex = currentTime.getMonth();
+
+  // Array for months
+  const monthNames = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+
+  // Get the month name from array using index
+  const month = monthNames[monthIndex];
+
+  // Get the current year
   const year = currentTime.getFullYear();
 
   // Format the time and date strings
   const formatTime = `${hours}:${minutes}:${seconds}`;
-  const formatDate = `${day}/${month}/${year}`;
+  const formatDate = `${day} ${month} ${year}`;
 
   // Updates the time and date with the new format
   timeH3.textContent = formatTime;
