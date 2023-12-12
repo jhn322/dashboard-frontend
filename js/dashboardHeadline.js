@@ -32,3 +32,17 @@ const changeHeadline = () => {
     localStorage.setItem("userHeadline", finalText);
   });
 };
+
+// Arrow function to load the saved text from localStorage
+const loadSavedText = () => {
+  const savedText = localStorage.getItem("userHeadline");
+  if (savedText) {
+    userHeadline.textContent = savedText;
+  }
+};
+
+// Loades the saved text when the page loads
+loadSavedText();
+
+// On click event listener for the h1 headline
+userHeadline.addEventListener("click", changeHeadline);
