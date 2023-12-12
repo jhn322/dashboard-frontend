@@ -18,7 +18,7 @@ body {
 }
 
 /* Container for the clock element */
-.clock-container {
+.timeDate-container {
   margin-top: 2rem;
   display: flex;
   justify-content: center;
@@ -32,7 +32,7 @@ body {
 }
 
 /* Clock h3 container */
-.clock {
+.timeDate {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,7 +41,7 @@ body {
   font-size: 1.1rem;
 }
 
-.date {
+.timeDate-h3 {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
 }
