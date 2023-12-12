@@ -41,12 +41,14 @@ body {
   font-size: 1.1rem;
 }
 
+/* Thicker font and width to stop the slight jitter/movement inside the container */
 .time-h3 {
   font-weight: 700;
+  width: 5rem;
 }
 
 .date-p {
-  margin-left: 1rem;
+  margin-left: 2rem;
 }
 
 /* Main container for all elements */
