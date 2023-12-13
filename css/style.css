@@ -155,14 +155,50 @@ body {
   background-color: rgba(220, 220, 220, 0.6);
 }
 
+/* Styling for notes textarea */
 .notes-area {
   background-color: rgba(240, 240, 240, 0.8);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
   border-radius: 10px;
   border: none;
+  outline: none;
   width: 95%;
   height: 75%;
   resize: none;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Styling for delete button */
+#notes-delete-btn {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  width: 9rem;
+  font-size: 0.9rem;
+  width: 10rem;
+  height: 2.8rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 10px;
+  border: none;
+  cursor: pointer;
+  color: rgba(240, 240, 240, 0.8);
+  background: linear-gradient(rgba(70, 70, 70, 0.5), rgba(70, 70, 70, 0.5));
+  backdrop-filter: blur(10px);
+  transition: 0.4s;
+}
+
+/* Styling delete icon */
+#notes-delete-btn i::before {
+  font-size: 16px;
+  color: rgba(240, 240, 240, 0.8);
+}
+
+#notes-delete-btn:hover {
+  background-color: rgba(220, 220, 220, 0.6);
 }
 
 /* Container for the background button */
