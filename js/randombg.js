@@ -9,10 +9,11 @@ const getRandomImage = async () => {
 
   // Checks if fetch was a success
   if (response.ok) {
-    // Converts respone to JSON format
+    // Converts response to JSON format
     const data = await response.json();
-    // Calls function to set as background
+    // Calls function to set as background and saves to localstorage
     setImageBackground(data);
+    saveToLocalStorage(data.urls.regular);
   } else {
     // Log error to console if fail
     console.log("Error fetching random image:", response.status);
@@ -27,17 +28,34 @@ const setImageBackground = (data) => {
   document.body.style.backgroundImage = `url(${imageUrl})`;
 };
 
-// Event listener for button on click
+// Save image URL to localstorage
+const saveToLocalStorage = (imageUrl) => {
+  localStorage.setItem("backgroundImage", imageUrl);
+};
+
+// Arrow function to get image from localstorage
+const getImageFromLocalStorage = () => {
+  return localStorage.getItem("backgroundImage");
+};
+
+// Event listener for page load
 document.addEventListener("DOMContentLoaded", () => {
-  //Loads random image when page loads
-  getRandomImage();
+  // Loading image from localstorage
+  const savedImageUrl = getImageFromLocalStorage();
+  if (savedImageUrl) {
+    // Set the saved image as background
+    document.body.style.backgroundImage = `url(${savedImageUrl})`;
+  } else {
+    // If no image is saved, load a random image
+    getRandomImage();
+  }
 
   // Selects the background button from HTML
   const bgBtn = document.querySelector(".bg-btn"); // Replace with your button class
 
   // Adds an on click event to the button
   bgBtn.addEventListener("click", () => {
-    // Calls the function when the button is pressed
+    // Calls the function to fetch a new random image and saves to localstorage
     getRandomImage();
   });
 });
