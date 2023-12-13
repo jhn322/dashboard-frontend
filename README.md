@@ -6,7 +6,9 @@ Johan Söderlund
 
 ### Länk till webbsidan:
 
-https://jhn322.github.io/dashboard-frontend/
+[GitHub Pages](https://jhn322.github.io/dashboard-frontend/)
+
+[Netlify](https://jhn-dashboard.netlify.app/)
 
 ### Information:
 
