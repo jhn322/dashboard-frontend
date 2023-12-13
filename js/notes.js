@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Saves the input to localstorage upon typing anything
   notesTextarea.addEventListener("input", () => {
-    localStorage.setItem("userNotes", this.value);
+    localStorage.setItem("userNotes", notesTextarea.value);
   });
 
   // Arrow function to listen for click on the delete button
