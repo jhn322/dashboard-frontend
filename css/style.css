@@ -234,6 +234,22 @@ body {
   font-size: 18px;
 }
 
+/* Rotates arrow 360 degrees */
+@keyframes spin360 {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Calls class from js */
+.spin {
+  animation: spin360 0.4s;
+}
+
 .bg-btn:hover {
   background-color: rgba(220, 220, 220, 0.4);
 }
@@ -283,7 +299,7 @@ body {
   /* Bigger font & margins */
   .dashboard-headline {
     font-size: 4rem;
-    margin: 6rem 0 2rem 0;
+    margin: 4rem 0 2rem 0;
   }
 
   /* Adjustsed width height */
@@ -300,6 +316,7 @@ body {
   /* Specified max-width */
   .the-dashboard {
     max-width: 120rem;
+    margin-top: 4rem;
     display: flex;
     flex-direction: row;
   }
