@@ -29,6 +29,9 @@ const setImageBackground = (data) => {
 
 // Event listener for button on click
 document.addEventListener("DOMContentLoaded", () => {
+  //Loads random image when page loads
+  getRandomImage();
+
   // Selects the background button from HTML
   const bgBtn = document.querySelector(".bg-btn"); // Replace with your button class
 
