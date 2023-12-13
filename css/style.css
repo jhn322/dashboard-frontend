@@ -135,10 +135,7 @@ body {
   border: none;
   cursor: pointer;
   color: rgba(240, 240, 240, 0.8);
-  background: linear-gradient(
-    rgba(128, 128, 128, 0.3),
-    rgba(128, 128, 128, 0.3)
-  );
+  background: linear-gradient(rgba(70, 70, 70, 0.5), rgba(70, 70, 70, 0.5));
   backdrop-filter: blur(10px);
   transition: 0.4s;
 }
@@ -149,7 +146,7 @@ body {
 }
 
 .dash-element-btn:hover {
-  background-color: rgba(128, 128, 128, 0.4);
+  background-color: rgba(220, 220, 220, 0.6);
 }
 
 /* Container for the background button */
@@ -174,10 +171,7 @@ body {
   border: none;
   cursor: pointer;
   color: rgba(240, 240, 240, 0.8);
-  background: linear-gradient(
-    rgba(128, 128, 128, 0.3),
-    rgba(128, 128, 128, 0.3)
-  );
+  background: linear-gradient(rgba(70, 70, 70, 0.5), rgba(70, 70, 70, 0.5));
   backdrop-filter: blur(10px);
   transition: 0.4s;
 }
@@ -188,7 +182,7 @@ body {
 }
 
 .bg-btn:hover {
-  background-color: rgba(128, 128, 128, 0.4);
+  background-color: rgba(220, 220, 220, 0.2);
 }
 
 /* Tablet */
