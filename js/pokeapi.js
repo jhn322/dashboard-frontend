@@ -2,6 +2,9 @@
 
 // Event listener when the DOM content is fully loaded on the page
 document.addEventListener("DOMContentLoaded", () => {
+  // Calls fetchRandomPokemon to display upon entering the page
+  fetchRandomPokemon();
+
   // Get the button element from HTML by ID
   const randomPokemonButton = document.getElementById("randomPokemonButton");
   // Add an on click event listener to the button
@@ -33,9 +36,6 @@ const fetchRandomPokemon = () => {
 
       // Fetching ID, types, and stats, name, weight, height
       const types = data.types.map((type) => type.type.name).join(", ");
-      const stats = data.stats
-        .map((stat) => `${stat.stat.name}: ${stat.base_stat}`)
-        .join("<br>");
 
       pokemonDiv.innerHTML = `
                 <h3>Name: ${data.name}</h3>
@@ -44,7 +44,6 @@ const fetchRandomPokemon = () => {
                 <p>Type: ${types}</p>
                 <p>Height: ${data.height}</p>
                 <p>Weight: ${data.weight}</p>
-                <p>Stats:<br>${stats}</p>
             `;
     })
 
