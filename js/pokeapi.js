@@ -30,14 +30,24 @@ const fetchRandomPokemon = () => {
     .then((data) => {
       // Display the fetched data in the HTML
       const pokemonDiv = document.getElementById("pokemonData");
-      // Populate the HTML element with Pokémon data
+
+      // Fetching ID, types, and stats, name, weight, height
+      const types = data.types.map((type) => type.type.name).join(", ");
+      const stats = data.stats
+        .map((stat) => `${stat.stat.name}: ${stat.base_stat}`)
+        .join("<br>");
+
       pokemonDiv.innerHTML = `
                 <h3>Name: ${data.name}</h3>
+                <p>Pokédex: ${data.id}</p>
                 <img src="${data.sprites.front_default}" alt="${data.name}" />
+                <p>Type: ${types}</p>
                 <p>Height: ${data.height}</p>
                 <p>Weight: ${data.weight}</p>
+                <p>Stats:<br>${stats}</p>
             `;
     })
+
     // If there's an error log it to the console
     .catch((error) => {
       // Log the error to the console
