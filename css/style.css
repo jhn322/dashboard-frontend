@@ -28,6 +28,7 @@ body {
     rgba(128, 128, 128, 0.3)
   );
   backdrop-filter: blur(10px);
+  cursor: default;
 }
 
 /* Clock h3 container */
@@ -70,7 +71,7 @@ body {
 }
 
 #userSpecificHeadline:hover {
-  color: rgba(18, 18, 18, 0.8);
+  color: rgba(25, 25, 25, 0.8);
 }
 
 /* Styling for the input field & text from JS */
