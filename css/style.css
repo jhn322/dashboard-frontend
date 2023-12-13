@@ -164,9 +164,9 @@ body {
   border: none;
   outline: none;
   width: 95%;
-  height: 75%;
+  height: 65%;
   resize: none;
-  margin-bottom: 1rem;
+  margin-bottom: 1.3rem;
 }
 
 /* Styling for delete button */
@@ -314,6 +314,20 @@ body {
 
   /* Touch friendly not needed, thinner button  */
   .dash-element-btn {
+    width: 9rem;
+    height: 2rem;
+    font-size: 0.8rem;
+  }
+
+  /* Bigger size in desktop */
+  .notes-area {
+    width: 95%;
+    height: 75%;
+    margin-bottom: 1rem;
+  }
+
+  /* Touch friendly not needed, thinner button  */
+  #notes-delete-btn {
     width: 9rem;
     height: 2rem;
     font-size: 0.8rem;
