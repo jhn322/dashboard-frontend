@@ -292,6 +292,7 @@ img {
   width: 95%;
   height: 65%;
   resize: none;
+  padding: 0.4rem;
   margin-bottom: 1.3rem;
 }
 
