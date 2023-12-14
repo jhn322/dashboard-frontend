@@ -49,6 +49,9 @@ const getWeather = (position) => {
         data.currentConditions.temp,
         data.currentConditions.description
       );
+    })
+    .catch((error) => {
+      console.error("Error fetching todays weather", error);
     });
 
   // Fetch weather data for tomorrow
@@ -62,6 +65,9 @@ const getWeather = (position) => {
         data.days[0].temp,
         data.days[0].conditions
       );
+    })
+    .catch((error) => {
+      console.error("Error fetching tomorrows weather", error);
     });
 
   // Fetch weather data for 3 days from now
@@ -75,6 +81,9 @@ const getWeather = (position) => {
         data.days[0].temp,
         data.days[0].conditions
       );
+    })
+    .catch((error) => {
+      console.error("Error fetching 3 days weather", error);
     });
 
   // Fetch weather data for 7 days from now
@@ -88,6 +97,9 @@ const getWeather = (position) => {
         data.days[0].temp,
         data.days[0].conditions
       );
+    })
+    .catch((error) => {
+      console.error("Error fetching 7 days weather", error);
     });
 };
 
@@ -110,9 +122,25 @@ const displayWeatherData = (
     Overcast: "./images/overcast.png",
     Rain: "./images/rain.png",
     Thunderstorm: "./images/thunderstorm.png",
-    Snowing: "./images/snowing.png",
+    Snow: "./images/snowing.png",
     Clear: "./images/clearsky.png",
     "Partially cloudy": "./images/partiallycloudy.png",
+    // Combinations
+    "Sunny, Cloudy": "./images/sunny.png",
+    "Sunny, Overcast": "./images/sunny.png",
+    "Sunny, Rain": "./images/sunny.png",
+    "Cloudy, Overcast": "./images/cloudy.png",
+    "Cloudy, Rain": "./images/rain.png",
+    "Cloudy, Rain, Thunderstorm": "./images/thunderstorm.png",
+    "Rain, Thunderstorm": "./images/thunderstorm.png",
+    "Rain, Snow": "./images/snow.png",
+    "Thunderstorm, Snow": "./images/thunderstorm.png",
+    "Snow, Overcast": "./images/snowing.png",
+    "Snow, Rain, Partially cloudy": "./images/snowing.png",
+    "Clear, Sunny": "./images/sunny.png",
+    "Overcast, Cloudy": "./images/overcast.png",
+    "Overcast, Rain": "./images/rain.png",
+    "Partially cloudy, Overcast": "./images/partiallycloudy.png",
   };
 
   // Create an image element and set its source
