@@ -154,6 +154,7 @@ body {
   background-color: rgba(220, 220, 220, 0.6);
 }
 
+/* Partent container for weather elements */
 .weather-container {
   width: 10rem;
   height: 35rem;
@@ -163,13 +164,14 @@ body {
   flex-direction: column;
 }
 
+/* Styling for weather elements */
 #weather-info-today,
 #weather-info-tomorrow,
 #weather-info-three-days,
 #weather-info-seven-days {
   display: flex;
-  width: 22.8rem;
-  height: 5rem;
+  width: 21rem;
+  height: 4.5rem;
   background: linear-gradient(
     rgba(255, 255, 255, 0.6),
     rgba(255, 255, 255, 0.6)
@@ -383,6 +385,16 @@ img {
     font-size: 2.2rem;
   }
 
+  /* Bigger weather elements */
+  #weather-info-today,
+  #weather-info-tomorrow,
+  #weather-info-three-days,
+  #weather-info-seven-days {
+    width: 22.8rem;
+    height: 5rem;
+    margin-bottom: 0.5rem;
+  }
+
   /* Bigger Pokémon name */
   #pokemonData h3 {
     font-size: 2rem;
@@ -452,6 +464,16 @@ img {
     width: 9rem;
     height: 2rem;
     font-size: 0.8rem;
+  }
+
+  /* Bigger weather elements */
+  #weather-info-today,
+  #weather-info-tomorrow,
+  #weather-info-three-days,
+  #weather-info-seven-days {
+    width: 22.8rem;
+    height: 5rem;
+    margin-bottom: 0.5rem;
   }
 
   /* Bigger Pokémon name */
