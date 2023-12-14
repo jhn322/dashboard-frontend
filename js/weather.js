@@ -42,6 +42,7 @@ const getWeather = (position) => {
   fetch(weatherToday)
     .then((response) => response.json())
     .then((data) => {
+      console.log("Today's Weather Data:", data);
       // Show today's weather using hmtl id
       displayWeatherData(
         "weather-info-today",
@@ -58,6 +59,7 @@ const getWeather = (position) => {
   fetch(weatherTomorrow)
     .then((response) => response.json())
     .then((data) => {
+      console.log("Tomorrow's Weather Data:", data);
       // Show tomorrow's weather using hmtl id
       displayWeatherData(
         "weather-info-tomorrow",
@@ -74,6 +76,7 @@ const getWeather = (position) => {
   fetch(weatherThreeDays)
     .then((response) => response.json())
     .then((data) => {
+      console.log("3 Days Weather Data:", data);
       // Show 3 days from now weather using hmtl id
       displayWeatherData(
         "weather-info-three-days",
@@ -90,6 +93,7 @@ const getWeather = (position) => {
   fetch(weatherSevenDays)
     .then((response) => response.json())
     .then((data) => {
+      console.log("7 Days Weather Data:", data);
       // Show 7 days from now weather using hmtl id
       displayWeatherData(
         "weather-info-seven-days",
@@ -110,6 +114,7 @@ const displayWeatherData = (
   tempFahrenheit,
   description
 ) => {
+  console.log("Description", description);
   // Gets the id to show weather data
   const weatherInfo = document.getElementById(containerId);
   // Converts temp from Fahrenheit to Celsius
