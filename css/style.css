@@ -118,6 +118,7 @@ body {
   margin-bottom: auto;
   margin-top: 1rem;
   font-size: 2rem;
+  cursor: default;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
 }
@@ -223,6 +224,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  cursor: default;
 }
 
 #pokemonData h3 {
