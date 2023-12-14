@@ -105,28 +105,50 @@ const displayWeatherData = (
 
   const weatherImages = {
     Sunny: "./images/sunny.png",
-    PartiallyCloudy: "./images/cloudy.png",
+    Cloudy: "./images/cloudy.png",
     Overcast: "./images/overcast.png",
     Rain: "./images/rain.png",
+    Thunderstorm: "./images/thunderstorm.png",
+    Snowing: "./images/snowing.png",
+    "Clear sky": "./images/clear-sky.png",
+    "Partially cloudy": "./images/partiallycloudy.png",
   };
 
-  const weatherImage = weatherImages[description];
-
+  // Create an image element and set its source
   const imageElement = document.createElement("img");
-  imageElement.src = weatherImage;
-  imageElement.alt = description;
+  imageElement.alt = description; // Provide an alternative text
 
-  // Show weather info on the dashboard page
-  weatherInfo.innerHTML = `
-  <h3>${title}</h3>
-  <div class="weather-details">
-    <p>${temperatureCelsius.toFixed(2)}°C | </p>
-    <p>${description}</p>
-         <div class="weather-image-container">
-        <!-- Append the image element to display -->
+  // Check if there's an image available for the weather condition
+  if (weatherImages.hasOwnProperty(description)) {
+    const weatherImage = weatherImages[description];
+    imageElement.src = weatherImage;
+
+    // Show weather info on the dashboard page
+    weatherInfo.innerHTML = `
+    <h3>${title}</h3>
+    <div class="weather-details">
+      <p>${temperatureCelsius.toFixed(2)}°C | </p>
+      <p>${description}</p>
+      <div class="weather-image-container">
       </div>
-  </div>
-`;
+    </div>
+  `;
+
+    // Append the image element to the container
+    const imageContainer = weatherInfo.querySelector(
+      ".weather-image-container"
+    );
+    imageContainer.appendChild(imageElement);
+  } else {
+    // If no image is available, show the weather info without an image
+    weatherInfo.innerHTML = `
+    <h3>${title}</h3>
+    <div class="weather-details">
+      <p>${temperatureCelsius.toFixed(2)}°C | </p>
+      <p>${description}</p>
+    </div>
+  `;
+  }
 
   // Append the image element to the container
   const imageContainer = weatherInfo.querySelector(".weather-image-container");
