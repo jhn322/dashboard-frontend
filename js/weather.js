@@ -153,7 +153,11 @@ const displayWeatherData = (
 
   // Append the image element to the container
   const imageContainer = weatherInfo.querySelector(".weather-image-container");
-  imageContainer.appendChild(imageElement);
+
+  // Appends the image only if an image is available
+  if (weatherImages.hasOwnProperty(description)) {
+    imageContainer.appendChild(imageElement);
+  }
 };
 
 // Calls the weather function
