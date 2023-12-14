@@ -103,14 +103,34 @@ const displayWeatherData = (
   // Converts temp from Fahrenheit to Celsius
   const temperatureCelsius = convertToCelsius(tempFahrenheit);
 
+  const weatherImages = {
+    Sunny: "./images/sunny.png",
+    PartiallyCloudy: "./images/cloudy.png",
+    Overcast: "./images/overcast.png",
+    Rain: "./images/rain.png",
+  };
+
+  const weatherImage = weatherImages[description];
+
+  const imageElement = document.createElement("img");
+  imageElement.src = weatherImage;
+  imageElement.alt = description;
+
   // Show weather info on the dashboard page
   weatherInfo.innerHTML = `
   <h3>${title}</h3>
   <div class="weather-details">
     <p>${temperatureCelsius.toFixed(2)}°C | </p>
     <p>${description}</p>
+         <div class="weather-image-container">
+        <!-- Append the image element to display -->
+      </div>
   </div>
 `;
+
+  // Append the image element to the container
+  const imageContainer = weatherInfo.querySelector(".weather-image-container");
+  imageContainer.appendChild(imageElement);
 };
 
 // Calls the weather function
