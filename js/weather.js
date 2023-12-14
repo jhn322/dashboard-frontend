@@ -105,9 +105,9 @@ const displayWeatherData = (
 
   // Show weather info on the dashboard page
   weatherInfo.innerHTML = `
-    <h3>${title}:</h3>
-    <p>Temperature: ${temperatureCelsius.toFixed(2)}°C</p>
-    <p>Condition: ${description}</p>
+    <h3>${title}</h3>
+    <p>${temperatureCelsius.toFixed(2)}°C</p>
+    <p>${description}</p>
   `;
 };
 
