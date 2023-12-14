@@ -39,13 +39,18 @@ const fetchRandomPokemon = () => {
       // Capitalizing the first letter of the name
       const capitalizedPokemonName = capitalizeFirstLetter(data.name);
 
+      // Converts height to meters and restricts to 2 decimals
+      const heightInMeters = (data.height / 10).toFixed(2);
+      // Converts weight to kilograms and restricts to 1 decimals
+      const weightInKg = (data.weight / 10).toFixed(1);
+
       pokemonDiv.innerHTML = `
                 <h3> ${capitalizedPokemonName}</h3>
                 <p>Pokédex: ${data.id}</p>
                 <img src="${data.sprites.front_default}" alt="${data.name}" />
                 <p>Type: ${types}</p>
-                <p>Height: ${data.height}</p>
-                <p>Weight: ${data.weight}</p>
+                <p>Height: ${heightInMeters}m</p>
+                <p>Weight: ${weightInKg}kg</p>
             `;
     })
 
