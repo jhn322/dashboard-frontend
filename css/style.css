@@ -179,6 +179,7 @@ body {
   backdrop-filter: blur(10px);
   margin-bottom: 0.5rem;
   border-radius: 10px;
+  cursor: default;
 }
 
 /* P tags on the same row */
@@ -190,18 +191,33 @@ body {
   height: 3.4rem;
 }
 
+.weather p {
+  transition: transform 0.4s ease-out;
+}
+
+/* Zoom on p tags */
+.weather p:hover {
+  transform: scale(1.15);
+}
+
 /* Add space between the two p tags */
 .weather p + p {
-  margin-left: 0.2rem;
+  margin-left: 0.7rem;
 }
 
 /* Styling for weather images */
 .weather-image-container img {
   display: flex;
-  margin-left: 0.5rem;
+  margin-left: 0.7rem;
   width: 60px;
   height: 60px;
   object-fit: cover;
+  transition: transform 0.4s ease-in-out;
+}
+
+/* Slight zoom on hover */
+.weather-image-container img:hover {
+  transform: scale(1.1);
 }
 
 /* Flex properties for pokemon container */

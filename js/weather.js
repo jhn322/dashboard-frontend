@@ -111,7 +111,7 @@ const displayWeatherData = (
     Rain: "./images/rain.png",
     Thunderstorm: "./images/thunderstorm.png",
     Snowing: "./images/snowing.png",
-    "Clear sky": "./images/clear-sky.png",
+    "Clear sky": "./images/clearsky.png",
     "Partially cloudy": "./images/partiallycloudy.png",
   };
 
@@ -128,7 +128,7 @@ const displayWeatherData = (
     weatherInfo.innerHTML = `
     <h3>${title}</h3>
     <div class="weather-details">
-      <p>${temperatureCelsius.toFixed(2)}°C | </p>
+      <p>${temperatureCelsius.toFixed(2)}°C</p>
       <p>${description}</p>
       <div class="weather-image-container">
       </div>
@@ -145,7 +145,7 @@ const displayWeatherData = (
     weatherInfo.innerHTML = `
     <h3>${title}</h3>
     <div class="weather-details">
-      <p>${temperatureCelsius.toFixed(2)}°C | </p>
+      <p>${temperatureCelsius.toFixed(2)}°C</p>
       <p>${description}</p>
     </div>
   `;
