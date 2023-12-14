@@ -170,8 +170,12 @@ body {
   display: flex;
   width: 22.8rem;
   height: 5rem;
-  background-color: rgba(240, 240, 240, 0.8);
-  margin-bottom: 0.9rem;
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.6),
+    rgba(255, 255, 255, 0.6)
+  );
+  backdrop-filter: blur(10px);
+  margin-bottom: 0.5rem;
   border-radius: 10px;
   align-items: center;
   justify-content: center;
@@ -240,7 +244,11 @@ img {
 
 /* Styling for notes textarea */
 .notes-area {
-  background-color: rgba(240, 240, 240, 0.8);
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.6),
+    rgba(255, 255, 255, 0.6)
+  );
+  backdrop-filter: blur(10px);
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
   border-radius: 10px;
