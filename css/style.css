@@ -180,6 +180,40 @@ textarea {
 }
 
 /* Partent container for weather elements */
+.link-container {
+  width: 10rem;
+  height: 35rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Styling for weather element */
+.quick-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 21rem;
+  height: 4.5rem;
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.6),
+    rgba(255, 255, 255, 0.6)
+  );
+  backdrop-filter: blur(10px);
+  margin-bottom: 0.5rem;
+  border-radius: 10px;
+  cursor: default;
+  transition: opacity 0.4s ease-out;
+}
+
+.link-container .quick-link a img {
+  width: 30px; /* Adjust as needed */
+  height: 30px; /* Adjust as needed */
+}
+
+/* Partent container for weather elements */
 .weather-container {
   width: 10rem;
   height: 35rem;
