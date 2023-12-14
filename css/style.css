@@ -180,6 +180,12 @@ body {
   margin-bottom: 0.5rem;
   border-radius: 10px;
   cursor: default;
+  transition: opacity 0.4s ease-out;
+}
+
+/* Zoom weather elements */
+.weather:hover {
+  opacity: 0.8;
 }
 
 /* P tags on the same row */
@@ -189,15 +195,6 @@ body {
   align-items: center;
   margin-top: -0.6rem;
   height: 3.4rem;
-}
-
-.weather p {
-  transition: transform 0.4s ease-out;
-}
-
-/* Zoom on p tags */
-.weather p:hover {
-  transform: scale(1.15);
 }
 
 /* Add space between the two p tags */
