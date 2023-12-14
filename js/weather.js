@@ -111,7 +111,7 @@ const displayWeatherData = (
     Rain: "./images/rain.png",
     Thunderstorm: "./images/thunderstorm.png",
     Snowing: "./images/snowing.png",
-    "Clear sky": "./images/clearsky.png",
+    Clear: "./images/clearsky.png",
     "Partially cloudy": "./images/partiallycloudy.png",
   };
 
