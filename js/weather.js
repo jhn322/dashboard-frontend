@@ -128,7 +128,7 @@ const displayWeatherData = (
     weatherInfo.innerHTML = `
     <h3>${title}</h3>
     <div class="weather-details">
-      <p>${temperatureCelsius.toFixed(2)}°C</p>
+      <p>${temperatureCelsius.toFixed(1)}°C</p>
       <p>${description}</p>
       <div class="weather-image-container">
       </div>
@@ -145,7 +145,7 @@ const displayWeatherData = (
     weatherInfo.innerHTML = `
     <h3>${title}</h3>
     <div class="weather-details">
-      <p>${temperatureCelsius.toFixed(2)}°C</p>
+      <p>${temperatureCelsius.toFixed(1)}°C</p>
       <p>${description}</p>
     </div>
   `;
