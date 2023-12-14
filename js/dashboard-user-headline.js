@@ -40,7 +40,7 @@ const updateHeadline = () => {
   const newText = inputField.value;
 
   // Sets the final text or default if empty
-  const finalText = newText === "" ? "[Click to Edit]" : newText;
+  const finalText = newText === "" ? "Dashboard" : newText;
   userHeadline.textContent = finalText;
 
   // Saves to localStorage
