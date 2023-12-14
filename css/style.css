@@ -249,7 +249,7 @@ img {
 
 /* Hovers the pokémon */
 img:hover {
-  transform: scale(1.3);
+  transform: scale(1.2);
 }
 
 /* Styling New Pokémon button */
