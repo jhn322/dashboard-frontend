@@ -154,6 +154,14 @@ body {
   background-color: rgba(220, 220, 220, 0.6);
 }
 
+.weather-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
 /* Flex properties for pokemon container */
 #pokemonData {
   display: flex;

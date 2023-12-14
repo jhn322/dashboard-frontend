@@ -1,3 +1,5 @@
+// This will gather information from visualcrossing free open API with weather information for several different days. Temperature in Celsius and weather condition is displayed.
+
 // Arrow function to get the user's geo location
 getLocation = () => {
   if (navigator.geolocation) {
@@ -48,6 +50,45 @@ const getWeather = (position) => {
         data.currentConditions.description
       );
     });
+
+  // Fetch weather data for tomorrow
+  fetch(weatherTomorrow)
+    .then((response) => response.json())
+    .then((data) => {
+      // Show tomorrow's weather using hmtl id
+      displayWeatherData(
+        "weather-info-tomorrow",
+        "Tomorrow",
+        data.days[0].temp,
+        data.days[0].conditions
+      );
+    });
+
+  // Fetch weather data for 3 days from now
+  fetch(weatherThreeDays)
+    .then((response) => response.json())
+    .then((data) => {
+      // Show 3 days from now weather using hmtl id
+      displayWeatherData(
+        "weather-info-three-days",
+        "3 Days",
+        data.days[0].temp,
+        data.days[0].conditions
+      );
+    });
+
+  // Fetch weather data for 7 days from now
+  fetch(weatherSevenDays)
+    .then((response) => response.json())
+    .then((data) => {
+      // Show 7 days from now weather using hmtl id
+      displayWeatherData(
+        "weather-info-seven-days",
+        "7 Days",
+        data.days[0].temp,
+        data.days[0].conditions
+      );
+    });
 };
 
 // Arrow function to show weather data
@@ -64,10 +105,9 @@ const displayWeatherData = (
 
   // Show weather info on the dashboard page
   weatherInfo.innerHTML = `
-    <p>Weather for ${title}:</p>
+    <h3>${title}:</h3>
     <p>Temperature: ${temperatureCelsius.toFixed(2)}°C</p>
-    <p>Description: ${description}</p>
-    <!-- Add more data as needed -->
+    <p>Condition: ${description}</p>
   `;
 };
 
