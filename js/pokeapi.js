@@ -36,9 +36,11 @@ const fetchRandomPokemon = () => {
 
       // Fetching ID, types, and stats, name, weight, height
       const types = data.types.map((type) => type.type.name).join(", ");
+      // Capitalizing the first letter of the name
+      const capitalizedPokemonName = capitalizeFirstLetter(data.name);
 
       pokemonDiv.innerHTML = `
-                <h3>Name: ${data.name}</h3>
+                <h3> ${capitalizedPokemonName}</h3>
                 <p>Pokédex: ${data.id}</p>
                 <img src="${data.sprites.front_default}" alt="${data.name}" />
                 <p>Type: ${types}</p>
@@ -52,4 +54,9 @@ const fetchRandomPokemon = () => {
       // Log the error to the console
       console.error("There was a problem fetching the data:", error);
     });
+};
+
+// Arrow function to capitilize the first letter of the Pokémon
+const capitalizeFirstLetter = (string) => {
+  return string.charAt(0).toUpperCase() + string.slice(1);
 };
