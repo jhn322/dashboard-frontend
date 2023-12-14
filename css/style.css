@@ -179,51 +179,8 @@ textarea {
   background-color: rgba(220, 220, 220, 0.6);
 }
 
-/* Partent container for weather elements */
-.link-container {
-  width: 10rem;
-  height: 35rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-/* Styling for weather element */
-.quick-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 21rem;
-  height: 4.5rem;
-  background: linear-gradient(
-    rgba(255, 255, 255, 0.6),
-    rgba(255, 255, 255, 0.6)
-  );
-  backdrop-filter: blur(10px);
-  margin-bottom: 0.5rem;
-  border-radius: 10px;
-  cursor: default;
-  transition: opacity 0.4s ease-out;
-}
-
-.link-container .quick-link a img {
-  width: 30px; /* Adjust as needed */
-  height: 30px; /* Adjust as needed */
-}
-
-/* Partent container for weather elements */
-.weather-container {
-  width: 10rem;
-  height: 35rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-/* Styling for weather element */
+/* Styling for quick links and weather element */
+.quick-link,
 .weather {
   display: flex;
   justify-content: center;
@@ -240,6 +197,46 @@ textarea {
   border-radius: 10px;
   cursor: default;
   transition: opacity 0.4s ease-out;
+}
+
+/* Styling for partent container of quick links and weather */
+.link-container,
+.weather-container {
+  width: 10rem;
+  height: 35rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Container for quick links */
+.quick-link a {
+  text-decoration: none;
+  width: 21rem;
+}
+
+/* Favicon properties */
+.quick-link img {
+  width: 50px;
+  height: 50px;
+  margin-left: 0.8rem;
+  border-radius: 10px;
+}
+
+/* Link title position */
+.quick-link h3 {
+  position: absolute;
+  top: 20px;
+  right: 140px;
+  margin: 0;
+}
+
+/* Remove link minus icon position */
+.fa-circle-minus {
+  position: absolute;
+  right: 14px;
+  cursor: pointer;
 }
 
 /* Zoom weather elements */
