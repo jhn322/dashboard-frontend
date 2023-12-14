@@ -67,6 +67,7 @@ textarea {
   align-items: center;
 }
 
+/* Font size headline */
 .dashboard-headline {
   font-size: 2.8rem;
   margin: 3rem 0 1.5rem 0;
@@ -125,9 +126,6 @@ textarea {
   margin-top: 1rem;
   font-size: 2rem;
   cursor: default;
-}
-
-.dash-element-headline {
   font-weight: 600;
 }
 
@@ -222,6 +220,12 @@ textarea {
   height: 50px;
   margin-left: 0.8rem;
   border-radius: 10px;
+  transition: transform 0.4s ease-in-out;
+}
+
+/* Favicon hover */
+.quick-link img:hover {
+  transform: scale(1.1);
 }
 
 /* Link title position */
@@ -230,6 +234,12 @@ textarea {
   top: 20px;
   right: 140px;
   margin: 0;
+  transition: 0.4s;
+}
+
+.quick-link h3:hover {
+  transition: transform 0.4s ease-in-out;
+  color: rgba(25, 25, 25, 0.8);
 }
 
 /* Remove link minus icon position */
@@ -237,6 +247,11 @@ textarea {
   position: absolute;
   right: 14px;
   cursor: pointer;
+}
+
+.fa-circle-minus:hover::before {
+  transition: color 0.2s ease-in-out;
+  color: rgb(229, 11, 11);
 }
 
 /* Zoom weather elements */
