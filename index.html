@@ -21,7 +21,7 @@
 
 <body>
     <!-- Container for the dashboard UI -->
-    <div class="dashboard-container">
+    <section class="dashboard-container">
 
         <!-- Clock and date in real time -->
         <aside class="timeDate-container">
@@ -37,10 +37,11 @@
         </div>
 
         <!-- Dashboard elements -->
-        <section class="the-dashboard">
+        <div class="the-dashboard">
             <article class="dash-element dash-element-1">
                 <h2 class="dash-element-headline dash-element-headline-1">Quick links</h2>
                 <button class="dash-element-btn"><i class="fa-solid fa-circle-plus"></i>Add more links</button>
+                <div class="dash-link"></div>
             </article>
 
             <!-- Fetches weather from API -->
@@ -71,16 +72,17 @@
                     placeholder="Write your notes..."></textarea>
                 <button id="notes-delete-btn"><i class="fa-solid fa-trash"></i> Delete</button>
             </article>
-        </section>
 
-        <!-- Button for generating random wallpapers from Unsplash -->
-        <aside class="bg-btn-container">
-            <button class="bg-btn"><i class="fa-solid fa-arrow-rotate-right"></i>Randomize Background</button>
-        </aside>
-    </div>
+            <!-- Button for generating random wallpapers from Unsplash -->
+            <aside class="bg-btn-container">
+                <button class="bg-btn"><i class="fa-solid fa-arrow-rotate-right"></i>Randomize Background</button>
+            </aside>
+        </div>
+    </section>
 
     <script src="./js/time-date.js"></script>
     <script src="./js/dashboard-user-headline.js"></script>
+    <script src="./js/quick-links.js"></script>
     <script src="./js/weather.js"></script>
     <script src="./js/pokeapi.js"></script>
     <script src="./js/notes.js"></script>
