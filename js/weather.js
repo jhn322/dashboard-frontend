@@ -103,6 +103,7 @@ const displayWeatherData = (
   // Converts temp from Fahrenheit to Celsius
   const temperatureCelsius = convertToCelsius(tempFahrenheit);
 
+  // Images tested against description
   const weatherImages = {
     Sunny: "./images/sunny.png",
     Cloudy: "./images/cloudy.png",
