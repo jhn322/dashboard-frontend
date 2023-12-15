@@ -43,13 +43,17 @@ const getWeather = (position) => {
     .then((response) => response.json())
     .then((data) => {
       console.log("Today's Weather Data:", data);
-      // Show today's weather using hmtl id
-      displayWeatherData(
-        "weather-info-today",
-        "Today",
-        data.currentConditions.temp,
-        data.currentConditions.description
-      );
+      if (data.currentConditions && data.currentConditions.temp !== undefined) {
+        // Show today's weather using hmtl id
+        displayWeatherData(
+          "weather-info-today",
+          "Today",
+          data.currentConditions.temp,
+          data.currentConditions.description
+        );
+      } else {
+        console.error("No data for today's weather");
+      }
     })
     .catch((error) => {
       console.error("Error fetching todays weather", error);
