@@ -589,3 +589,19 @@ img:hover {
     font-size: 0.9rem;
   }
 }
+
+/* Positioning fix specifically for webkit based browsers */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  /* Link title position */
+  .quick-link h3 {
+    position: absolute;
+    top: 0px;
+    right: 100px;
+  }
+
+  /* Remove link minus icon position */
+  .fa-circle-minus {
+    position: absolute;
+    right: 10px;
+  }
+}
