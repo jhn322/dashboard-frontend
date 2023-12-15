@@ -2,7 +2,7 @@
 
 // Event listener when the DOM content is fully loaded on the page
 document.addEventListener("DOMContentLoaded", () => {
-  // Calls fetchRandomPokemon to display saved Pokemon from localStorage
+  // Localstorage to save the random Pokemon on page load
   const savedPokemon = localStorage.getItem("randomPokemon");
   if (savedPokemon) {
     displayPokemon(JSON.parse(savedPokemon));
@@ -37,43 +37,34 @@ const fetchRandomPokemon = () => {
     })
     // Handle the data from the API
     .then((data) => {
-      // Extract details from the fetched Pokemon data
-      const pokemonDetails = {
-        // Capitalizing the first letter of the name
-        name: capitalizeFirstLetter(data.name),
-        id: data.id,
-        image: data.sprites.front_default,
-        // Fetching Pokemon types
-        types: data.types.map((type) => type.type.name).join(", "),
-        // Converts height to meters and restricts to 2 decimals
-        height: (data.height / 10).toFixed(2),
-        // Converts weight to kilograms and restricts to 1 decimals
-        weight: (data.weight / 10).toFixed(1),
-      };
+      // Display the fetched data in the HTML
+      const pokemonDiv = document.getElementById("pokemonData");
 
-      // Save the fetched Pokemon to localStorage
-      localStorage.setItem("randomPokemon", JSON.stringify(pokemonDetails));
+      // Fetching ID, types, and stats, name, weight, height
+      const types = data.types.map((type) => type.type.name).join(", ");
+      // Capitalizing the first letter of the name
+      const capitalizedPokemonName = capitalizeFirstLetter(data.name);
 
-      // Display the fetched Pokemon details
-      displayPokemon(pokemonDetails);
+      // Converts height to meters and restricts to 2 decimals
+      const heightInMeters = (data.height / 10).toFixed(2);
+      // Converts weight to kilograms and restricts to 1 decimals
+      const weightInKg = (data.weight / 10).toFixed(1);
+
+      pokemonDiv.innerHTML = `
+                <h3> ${capitalizedPokemonName}</h3>
+                <p>Pokédex: ${data.id}</p>
+                <img src="${data.sprites.front_default}" alt="${data.name}" id="pokemonImage" />
+                <p>Type: ${types}</p>
+                <p>Height: ${heightInMeters}m</p>
+                <p>Weight: ${weightInKg}kg</p>
+            `;
     })
-    // If error type
+
+    // If there's an error log it to the console
     .catch((error) => {
+      // Log the error to the console
       console.error("There was a problem fetching the data:", error);
     });
-};
-
-// Display the fetched data from the HTML
-const displayPokemon = (pokemon) => {
-  const pokemonDiv = document.getElementById("pokemonData");
-  pokemonDiv.innerHTML = `
-    <h3>${pokemon.name}</h3>
-    <p>Pokédex: ${pokemon.id}</p>
-    <img src="${pokemon.image}" alt="${pokemon.name}" id="pokemonImage" />
-    <p>Type: ${pokemon.types}</p>
-    <p>Height: ${pokemon.height}m</p>
-    <p>Weight: ${pokemon.weight}kg</p>
-  `;
 };
 
 // Arrow function to capitilize the first letter of the Pokémon
