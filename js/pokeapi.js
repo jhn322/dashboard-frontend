@@ -1,4 +1,4 @@
-// The purpose of this code is to fetch information from https://pokeapi.co/ using their open API to show a information about a random pokémon for example their height, weight, name. The user should also be able to randomize information about a new pokémon as many times as they want basically.
+// The purpose of this code is to fetch information from https://pokeapi.co/ using their open API to show a information about a random pokémon, for example their height, name etc. The user should also be able to randomize information about a new pokémon as many times as they want and the current Pokemon will be saved until a new one is randomized.
 
 // Event listener when the DOM content is fully loaded on the page
 document.addEventListener("DOMContentLoaded", () => {
