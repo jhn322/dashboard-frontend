@@ -1,7 +1,7 @@
 // This line of code has the purpose of giving the user a choice to add a link to a web page, give it a name and on OK add it to the dashboard for easy access at any time. It should be easy for the user to add, delete and access these links.
 
 // Selects the class with the name add-link-btn from HTML
-const addButton = document.querySelector(".add-link-btn");
+const addLinkButton = document.querySelector(".add-link-btn");
 // Selects the class with the name link-container from HTML
 const linkContainer = document.querySelector(".link-container");
 
@@ -105,4 +105,4 @@ const addLink = () => {
 };
 
 // Added onclick event listener to add links button for adding links
-addButton.addEventListener("click", addLink);
+addLinkButton.addEventListener("click", addLink);
