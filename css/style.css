@@ -278,6 +278,10 @@ textarea {
   cursor: pointer;
 }
 
+.fa-circle-minus::before {
+  color: rgba(70, 70, 70, 0.5);
+}
+
 .fa-circle-minus:hover::before {
   transition: color 0.2s ease-in-out;
   color: rgb(176, 15, 15);
@@ -433,6 +437,20 @@ img:hover {
     font-size: 2.2rem;
   }
 
+  /* Unique quick link container size */
+  .link-container {
+    width: 10rem;
+    height: 25rem;
+    margin-top: 1.8rem;
+  }
+
+  /* Bigger size */
+  .quick-link {
+    width: 22.8;
+    height: 5rem;
+    margin-bottom: 0.5rem;
+  }
+
   /* Bigger weather elements */
   #weather-info-today,
   #weather-info-tomorrow,
@@ -502,6 +520,20 @@ img:hover {
   /* Bigger Font dash headlines */
   .dash-element-headline {
     font-size: 2.4rem;
+  }
+
+  /* Unique quick link container size */
+  .link-container {
+    width: 10rem;
+    height: 25rem;
+    margin-top: 1.1rem;
+  }
+
+  /* Bigger size */
+  .quick-link {
+    width: 22.8;
+    height: 5rem;
+    margin-bottom: 0.5rem;
   }
 
   /* Touch friendly not needed, thinner button  */
