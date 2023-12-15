@@ -47,7 +47,7 @@ const fetchRandomPokemon = () => {
       pokemonDiv.innerHTML = `
                 <h3> ${capitalizedPokemonName}</h3>
                 <p>Pokédex: ${data.id}</p>
-                <img src="${data.sprites.front_default}" alt="${data.name}" />
+                <img src="${data.sprites.front_default}" alt="${data.name}" id="pokemonImage" />
                 <p>Type: ${types}</p>
                 <p>Height: ${heightInMeters}m</p>
                 <p>Weight: ${weightInKg}kg</p>
