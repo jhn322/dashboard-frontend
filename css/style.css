@@ -129,8 +129,26 @@ textarea {
   font-weight: 600;
 }
 
+/* Unique styling for add link button */
+.add-link-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10rem;
+  height: 2.8rem;
+  border-radius: 10px;
+  margin-top: auto;
+  margin-bottom: 1rem;
+  gap: 10px;
+  border: none;
+  cursor: pointer;
+  color: rgba(240, 240, 240, 0.8);
+  background: linear-gradient(rgba(70, 70, 70, 0.5), rgba(70, 70, 70, 0.5));
+  backdrop-filter: blur(10px);
+  transition: 0.4s;
+}
+
 /* Button for the quicklinks element */
-.dash-element-btn,
 .new-pokemon-btn,
 #notes-delete-btn,
 .bg-btn {
@@ -152,7 +170,7 @@ textarea {
 }
 
 /* Styling for buttons */
-.dash-element-btn,
+.add-link-btn,
 .new-pokemon-btn,
 #notes-delete-btn,
 .bg-btn {
@@ -161,7 +179,7 @@ textarea {
 }
 
 /* Styling for all icons */
-.dash-element-btn i::before,
+.add-link-btn i::before,
 .new-pokemon-btn i::before,
 #notes-delete-btn i::before,
 .bg-btn .fa-solid.fa-arrow-rotate-right::before {
@@ -170,7 +188,7 @@ textarea {
 }
 
 /* Hover all buttons */
-.dash-element-btn:hover,
+.add-link-btn:hover,
 .new-pokemon-btn:hover,
 #notes-delete-btn:hover,
 .bg-btn:hover {
@@ -197,11 +215,22 @@ textarea {
   transition: opacity 0.4s ease-out;
 }
 
-/* Styling for partent container of quick links and weather */
-.link-container,
+/* Styling for partent container of weather */
 .weather-container {
   width: 10rem;
   height: 35rem;
+  display: flex;
+  margin-bottom: 2rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Styling for partent container of link */
+.link-container {
+  width: 10rem;
+  height: 20rem;
+  margin-top: 0.8rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -251,7 +280,7 @@ textarea {
 
 .fa-circle-minus:hover::before {
   transition: color 0.2s ease-in-out;
-  color: rgb(229, 11, 11);
+  color: rgb(176, 15, 15);
 }
 
 /* Zoom weather elements */
@@ -346,7 +375,7 @@ img:hover {
   flex-direction: column;
 }
 
-/* Styling for background button */
+/* Unique styling for background button */
 .bg-btn {
   width: 22rem;
   height: 3.2rem;
@@ -476,7 +505,7 @@ img:hover {
   }
 
   /* Touch friendly not needed, thinner button  */
-  .dash-element-btn,
+  .add-link-btn,
   .new-pokemon-btn,
   #notes-delete-btn {
     width: 9rem;
