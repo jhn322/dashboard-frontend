@@ -1,7 +1,7 @@
 /* The purpose of this function is to allow the user to change the headline to whatever they want by simply clicking on it. Be it their name or something else. This allows for a bit more personalized dashboard landing page. */
 
 // Get the headline by id
-const userHeadline = document.getElementById("userSpecificHeadline");
+const userHeadline = document.getElementById("dashboardHeadline");
 
 // Declare inputField outside the function
 let inputField;

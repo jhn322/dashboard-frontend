@@ -73,18 +73,18 @@ textarea {
   margin: 3rem 0 1.5rem 0;
 }
 
-#userSpecificHeadline {
+#dashboardHeadline {
   text-align: center;
   cursor: pointer;
   transition: 0.4s;
 }
 
-#userSpecificHeadline:hover {
+#dashboardHeadline:hover {
   color: rgba(25, 25, 25, 0.8);
 }
 
 /* Styling for the input field & text from JS */
-#userSpecificHeadline input[type="text"] {
+#dashboardHeadline input[type="text"] {
   font-weight: 700;
   text-align: center;
   font-size: 2rem;
