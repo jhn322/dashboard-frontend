@@ -129,70 +129,15 @@ textarea {
   font-weight: 600;
 }
 
-/* Unique styling for add link button */
-.add-link-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* Styling for parent container of link */
+.link-container {
   width: 10rem;
-  height: 2.8rem;
-  border-radius: 10px;
-  margin-top: auto;
-  margin-bottom: 1rem;
-  gap: 10px;
-  border: none;
-  cursor: pointer;
-  color: rgba(240, 240, 240, 0.8);
-  background: linear-gradient(rgba(70, 70, 70, 0.5), rgba(70, 70, 70, 0.5));
-  backdrop-filter: blur(10px);
-  transition: 0.4s;
-}
-
-/* Button for the quicklinks element */
-.new-pokemon-btn,
-#notes-delete-btn,
-.bg-btn {
+  height: 20rem;
+  margin-top: 0.8rem;
   display: flex;
-  align-items: center;
   justify-content: center;
-  width: 10rem;
-  height: 2.8rem;
-  border-radius: 10px;
-  margin-top: auto;
-  margin-bottom: 1rem;
-  gap: 10px;
-  border: none;
-  cursor: pointer;
-  color: rgba(240, 240, 240, 0.8);
-  background: linear-gradient(rgba(70, 70, 70, 0.5), rgba(70, 70, 70, 0.5));
-  backdrop-filter: blur(10px);
-  transition: 0.4s;
-}
-
-/* Styling for buttons */
-.add-link-btn,
-.new-pokemon-btn,
-#notes-delete-btn,
-.bg-btn {
-  font-weight: 500;
-  font-size: 0.9rem;
-}
-
-/* Styling for all icons */
-.add-link-btn i::before,
-.new-pokemon-btn i::before,
-#notes-delete-btn i::before,
-.bg-btn .fa-solid.fa-arrow-rotate-right::before {
-  font-size: 16px;
-  color: rgba(240, 240, 240, 0.8);
-}
-
-/* Hover all buttons */
-.add-link-btn:hover,
-.new-pokemon-btn:hover,
-#notes-delete-btn:hover,
-.bg-btn:hover {
-  background-color: rgba(220, 220, 220, 0.6);
+  align-items: center;
+  flex-direction: column;
 }
 
 /* Styling for quick links and weather element */
@@ -213,28 +158,6 @@ textarea {
   border-radius: 10px;
   cursor: default;
   transition: opacity 0.4s ease-out;
-}
-
-/* Styling for partent container of weather */
-.weather-container {
-  width: 10rem;
-  height: 35rem;
-  display: flex;
-  margin-bottom: 2rem;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-/* Styling for partent container of link */
-.link-container {
-  width: 10rem;
-  height: 20rem;
-  margin-top: 0.8rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
 
 /* Container for quick links */
@@ -285,6 +208,36 @@ textarea {
 .fa-circle-minus:hover::before {
   transition: color 0.2s ease-in-out;
   color: rgb(176, 15, 15);
+}
+
+/* Unique styling for add link button */
+.add-link-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10rem;
+  height: 2.8rem;
+  border-radius: 10px;
+  margin-top: auto;
+  margin-bottom: 1rem;
+  gap: 10px;
+  border: none;
+  cursor: pointer;
+  color: rgba(240, 240, 240, 0.8);
+  background: linear-gradient(rgba(70, 70, 70, 0.5), rgba(70, 70, 70, 0.5));
+  backdrop-filter: blur(10px);
+  transition: 0.4s;
+}
+
+/* Styling for partent container of weather */
+.weather-container {
+  width: 10rem;
+  height: 35rem;
+  display: flex;
+  margin-bottom: 2rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 /* Zoom weather elements */
@@ -345,14 +298,14 @@ textarea {
 }
 
 /* Pokémon image size */
-img {
+#pokemonImage {
   height: auto;
   width: 10rem;
   transition: transform 0.4s ease-out;
 }
 
 /* Hovers the pokémon */
-img:hover {
+#pokemonImage:hover {
   transform: scale(1.2);
 }
 
@@ -372,6 +325,53 @@ img:hover {
   resize: none;
   padding: 0.4rem;
   margin-bottom: 1.3rem;
+}
+
+/* Button for the quicklinks element */
+.new-pokemon-btn,
+#notes-delete-btn,
+.bg-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10rem;
+  height: 2.8rem;
+  border-radius: 10px;
+  margin-top: auto;
+  margin-bottom: 1rem;
+  gap: 10px;
+  border: none;
+  cursor: pointer;
+  color: rgba(240, 240, 240, 0.8);
+  background: linear-gradient(rgba(70, 70, 70, 0.5), rgba(70, 70, 70, 0.5));
+  backdrop-filter: blur(10px);
+  transition: 0.4s;
+}
+
+/* Styling for most buttons */
+.add-link-btn,
+.new-pokemon-btn,
+#notes-delete-btn,
+.bg-btn {
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+/* Styling for all icons */
+.add-link-btn i::before,
+.new-pokemon-btn i::before,
+#notes-delete-btn i::before,
+.bg-btn .fa-solid.fa-arrow-rotate-right::before {
+  font-size: 16px;
+  color: rgba(240, 240, 240, 0.8);
+}
+
+/* Hover all buttons */
+.add-link-btn:hover,
+.new-pokemon-btn:hover,
+#notes-delete-btn:hover,
+.bg-btn:hover {
+  background-color: rgba(220, 220, 220, 0.6);
 }
 
 /* Container for the background button */
@@ -587,21 +587,5 @@ img:hover {
     width: 16rem;
     height: 2.2rem;
     font-size: 0.9rem;
-  }
-}
-
-/* Positioning fix specifically for webkit based browsers */
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  /* Link title position */
-  .quick-link h3 {
-    position: absolute;
-    top: 0px;
-    right: 100px;
-  }
-
-  /* Remove link minus icon position */
-  .fa-circle-minus {
-    position: absolute;
-    right: 10px;
   }
 }
