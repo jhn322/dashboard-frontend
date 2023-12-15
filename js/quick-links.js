@@ -44,6 +44,12 @@ const addLink = () => {
 
     // Checks if the URL & title are submitted
     if (linkURL && linkTitle) {
+      let fixedURL = linkURL;
+      // Checks if the user doesn't type http(s)://
+      if (!linkURL.startsWith("http://") && !linkURL.startsWith("https://")) {
+        // Assumes the user forgot it and adds it for the URL to work
+        fixedURL = `https://${linkURL}`;
+      }
       // Creates the elements for the new link
       const linkItem = document.createElement("div");
       linkItem.classList.add("quick-link");
@@ -51,7 +57,7 @@ const addLink = () => {
 
       const link = document.createElement("a");
       // Creates a link with written URL
-      link.href = linkURL;
+      link.href = fixedURL;
       // Sets the link to open in a new tab
       link.target = "_blank";
 
@@ -61,7 +67,7 @@ const addLink = () => {
 
       // Creates an image from the favicon link
       const favicon = document.createElement("img");
-      favicon.src = `https://www.google.com/s2/favicons?domain=${linkURL}`;
+      favicon.src = `https://www.google.com/s2/favicons?domain=${fixedURL}`;
       favicon.alt = "Favicon";
 
       // Creates an icon from fontawesome for removing the links
