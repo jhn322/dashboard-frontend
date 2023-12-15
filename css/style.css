@@ -300,7 +300,7 @@ textarea {
 /* Pokémon image size */
 #pokemonImage {
   height: auto;
-  width: 10rem;
+  width: 12rem;
   transition: transform 0.4s ease-out;
 }
 
@@ -462,6 +462,10 @@ textarea {
     margin-bottom: 0.5rem;
   }
 
+  #pokemonImage {
+    width: 15rem;
+  }
+
   /* Bigger Pokémon name */
   #pokemonData h3 {
     font-size: 2rem;
@@ -554,6 +558,10 @@ textarea {
     width: 22.8rem;
     height: 5rem;
     margin-bottom: 0.5rem;
+  }
+
+  #pokemonImage {
+    width: 15rem;
   }
 
   /* Bigger Pokémon name */
