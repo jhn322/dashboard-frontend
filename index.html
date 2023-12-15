@@ -21,7 +21,7 @@
 
 <body>
     <!-- Container for the dashboard UI -->
-    <section class="dashboard-container">
+    <div class="dashboard-container">
 
         <!-- Clock and date in real time -->
         <aside class="timeDate-container">
@@ -37,13 +37,15 @@
         </div>
 
         <!-- Quick links -->
-        <div class="the-dashboard">
-            <article class="dash-element dash-element-1">
-                <h2 class="dash-element-headline dash-element-headline-1">Quick links</h2>
-                <div class="link-container">
-                </div>
-                <button class="dash-element-btn"><i class="fa-solid fa-circle-plus"></i>Add more links</button>
-            </article>
+        <section class="the-dashboard">
+            <section>
+                <article class="dash-element dash-element-1">
+                    <h2 class="dash-element-headline dash-element-headline-1">Quick links</h2>
+                    <div class="link-container">
+                    </div>
+                    <button class="dash-element-btn"><i class="fa-solid fa-circle-plus"></i>Add more links</button>
+                </article>
+            </section>
 
             <!-- Fetches weather from API -->
             <article class="dash-element dash-element-2">
@@ -73,13 +75,13 @@
                     placeholder="Write your notes..."></textarea>
                 <button id="notes-delete-btn"><i class="fa-solid fa-trash"></i> Delete</button>
             </article>
+        </section>
 
-            <!-- Button for generating random wallpapers from Unsplash -->
-            <aside class="bg-btn-container">
-                <button class="bg-btn"><i class="fa-solid fa-arrow-rotate-right"></i>Randomize Background</button>
-            </aside>
-        </div>
-    </section>
+        <!-- Button for generating random wallpapers from Unsplash -->
+        <aside class="bg-btn-container">
+            <button class="bg-btn"><i class="fa-solid fa-arrow-rotate-right"></i>Randomize Background</button>
+        </aside>
+    </div>
 
     <script src="./js/time-date.js"></script>
     <script src="./js/dashboard-user-headline.js"></script>
