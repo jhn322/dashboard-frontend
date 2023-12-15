@@ -18,7 +18,7 @@ const changeHeadline = () => {
   // Clears the h1 and replaces it with input field
   userHeadline.textContent = "";
   userHeadline.appendChild(inputField);
-  inputField.value = currentText === "[Click to Edit]" ? "" : currentText;
+  inputField.value = currentText === "Dashboard" ? "" : currentText;
 
   // Selects the input field for instant type in
   inputField.select();
