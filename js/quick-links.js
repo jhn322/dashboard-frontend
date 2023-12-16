@@ -2,8 +2,8 @@
 
 // Selects the class with the name add-link-btn from HTML
 const addLinkButton = document.querySelector(".add-link-btn");
-// Selects the class with the name link-container from HTML
-const linkContainer = document.querySelector(".link-container");
+// Selects the class with the name quick-link-container from HTML
+const linkContainer = document.querySelector(".quick-link-container");
 
 // Function to save links to localStorage
 const saveLinks = () => {
@@ -35,7 +35,7 @@ const removeLinks = () => {
   });
 };
 
-// Arrow function to add a new link to the link-container
+// Arrow function to add a new link to the quick-link-container
 const addLink = () => {
   // If already added links are less than 4, user can add more links
   if (linkContainer.children.length < 4) {

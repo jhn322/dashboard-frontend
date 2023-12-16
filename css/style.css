@@ -439,7 +439,7 @@ textarea {
   }
 
   /* Unique quick link container size */
-  .link-container {
+  .quick-link-container {
     width: 10rem;
     height: 25rem;
     margin-top: 1.8rem;
@@ -462,6 +462,7 @@ textarea {
     margin-bottom: 0.5rem;
   }
 
+  /* Bigger Pokémon img */
   #pokemonImage {
     width: 15rem;
   }
@@ -469,12 +470,6 @@ textarea {
   /* Bigger Pokémon name */
   #pokemonData h3 {
     font-size: 2rem;
-  }
-
-  /* Bigger Pokémon img */
-  img {
-    height: auto;
-    width: 14rem;
   }
 
   .bg-btn {
@@ -560,6 +555,7 @@ textarea {
     margin-bottom: 0.5rem;
   }
 
+  /* Bigger Pokémon img */
   #pokemonImage {
     width: 15rem;
   }
@@ -567,12 +563,6 @@ textarea {
   /* Bigger Pokémon name */
   #pokemonData h3 {
     font-size: 2rem;
-  }
-
-  /* Bigger Pokémon img */
-  img {
-    height: auto;
-    width: 14rem;
   }
 
   /* Bigger size in desktop */
