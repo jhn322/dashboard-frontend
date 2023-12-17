@@ -143,6 +143,7 @@ const displayWeatherData = (
     "Cloudy, Rain, Thunderstorm": "./images/cloudy-rain-thunderstorm.png",
     "Rain, Thunderstorm": "./images/rain-thunderstorm.png",
     "Rain, Snow": "./images/snow.png",
+    "Rain, Partially cloudy": "./images/cloudy-rain.png",
     "Thunderstorm, Snow": "./images/thunderstorm.png",
     "Snow, Overcast": "./images/snowing.png",
     "Snow, Rain, Partially cloudy": "./images/snow-rain-partiallycloudy.png",
