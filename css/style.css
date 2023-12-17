@@ -194,6 +194,7 @@ textarea {
 /* Hover on link title */
 .quick-link h3 {
   transition: 0.4s;
+  margin-left: 2rem;
 }
 
 .quick-link h3:hover {
