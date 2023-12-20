@@ -244,7 +244,7 @@ textarea {
   width: 10rem;
   height: 35rem;
   display: flex;
-  margin-bottom: 2rem;
+  margin-bottom: 3.5rem;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -486,6 +486,10 @@ textarea {
     margin-left: -15.5rem;
   }
 
+  .weather-container {
+    margin-bottom: 4.9rem;
+  }
+
   /* Bigger weather elements */
   #weather-info-today,
   #weather-info-tomorrow,
@@ -504,6 +508,13 @@ textarea {
   /* Bigger Pokémon name */
   #pokemonData h3 {
     font-size: 2rem;
+  }
+
+  /* Adjusted size in tablet */
+  .notes-area {
+    width: 95%;
+    height: 61.5%;
+    margin-bottom: 2.75rem;
   }
 
   .bg-btn {
@@ -584,6 +595,10 @@ textarea {
     font-size: 0.8rem;
   }
 
+  .weather-container {
+    margin-bottom: 4.9rem;
+  }
+
   /* Bigger weather elements */
   #weather-info-today,
   #weather-info-tomorrow,
@@ -604,11 +619,11 @@ textarea {
     font-size: 2rem;
   }
 
-  /* Bigger size in desktop */
+  /* Adjusted size in desktop */
   .notes-area {
     width: 95%;
-    height: 75%;
-    margin-bottom: 1.3rem;
+    height: 61.5%;
+    margin-bottom: 2.75rem;
   }
 
   /* Button further down */
