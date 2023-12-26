@@ -69,7 +69,7 @@ const closeBtn = document.querySelector(".close");
 closeBtn.addEventListener("click", closeModal);
 
 // Event listener for adding link from the modal
-const modalAddBtn = document.getElementById("modalAdd");
+const modalAddBtn = document.getElementById("modalAdd-btn");
 modalAddBtn.addEventListener("click", () => {
   const linkURL = document.getElementById("linkURL").value;
   const linkTitle = document.getElementById("linkTitle").value;
