@@ -39,6 +39,24 @@ const linkLimit = () => {
   return linkContainer.children.length >= 4;
 };
 
+// Function to allow "Enter" key press on the modal input fields to confirm
+const enterToConfirm = () => {
+  document.getElementById("linkURL").addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+      // Triggers the "Add Link" button click event
+      document.getElementById("modalAdd-btn").click();
+    }
+  });
+
+  // Listen to Enter key to confirm
+  document.getElementById("linkTitle").addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+      // Triggers the "Add Link" button click event
+      document.getElementById("modalAdd-btn").click();
+    }
+  });
+};
+
 // Arrow function to display the modal and overlay
 const quickModal = () => {
   if (!linkLimit()) {
@@ -47,10 +65,17 @@ const quickModal = () => {
     const overlay = document.getElementById("overlay");
     modal.style.display = "block";
     overlay.style.display = "block";
+
+    // Added event listeners for "Enter" key press in modal input fields
+    enterToConfirm();
   } else {
     alert("You have reached the maximum number of quick links.");
   }
 };
+
+// Event listener for the "Add more links" button to display modal
+const addLinkButton = document.querySelector(".add-link-btn");
+addLinkButton.addEventListener("click", quickModal);
 
 // Arrow function to hide the modal
 const closeModal = () => {
@@ -59,10 +84,6 @@ const closeModal = () => {
   modal.style.display = "none";
   overlay.style.display = "none";
 };
-
-// Event listener for the "Add more links" button to display modal
-const addLinkButton = document.querySelector(".add-link-btn");
-addLinkButton.addEventListener("click", quickModal);
 
 // Event listener for closing the modal
 const closeBtn = document.querySelector(".close");
