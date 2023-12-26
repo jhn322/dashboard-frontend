@@ -1,11 +1,13 @@
-// Function to save links to localStorage
+// This will show a modal front and center focused to the user so they can add their webpage links of their choosing. Max 4 links can be added but previous links can be removed as well. Links are dynamically rendered in the element on the dashboard.
+
+// Arrow function to save links to localStorage
 const saveLinks = () => {
   const linkContainer = document.querySelector(".quick-link-container");
   const links = linkContainer.innerHTML;
   localStorage.setItem("dashboardLinks", links);
 };
 
-// Function to load links from localStorage
+// Arrow function to load links from localStorage
 const loadLinks = () => {
   const linkContainer = document.querySelector(".quick-link-container");
   const savedLinks = localStorage.getItem("dashboardLinks");
@@ -31,15 +33,51 @@ const removeLinks = () => {
   });
 };
 
-// Arrow function to add a new link to the quick-link-container
-const addLink = () => {
+// Arrow function to check if there are already 4 links saved
+const linkLimit = () => {
+  const linkContainer = document.querySelector(".quick-link-container");
+  return linkContainer.children.length >= 4;
+};
+
+// Arrow function to display the modal and overlay
+const quickModal = () => {
+  if (!linkLimit()) {
+    // Checks the link limit before displaying modal
+    const modal = document.getElementById("quickModal");
+    const overlay = document.getElementById("overlay");
+    modal.style.display = "block";
+    overlay.style.display = "block";
+  } else {
+    alert("You have reached the maximum number of quick links.");
+  }
+};
+
+// Arrow function to hide the modal
+const closeModal = () => {
+  const modal = document.getElementById("quickModal");
+  const overlay = document.getElementById("overlay");
+  modal.style.display = "none";
+  overlay.style.display = "none";
+};
+
+// Event listener for the "Add more links" button to display modal
+const addLinkButton = document.querySelector(".add-link-btn");
+addLinkButton.addEventListener("click", quickModal);
+
+// Event listener for closing the modal
+const closeBtn = document.querySelector(".close");
+closeBtn.addEventListener("click", closeModal);
+
+// Event listener for adding link from the modal
+const modalAddBtn = document.getElementById("modalAdd");
+modalAddBtn.addEventListener("click", () => {
+  const linkURL = document.getElementById("linkURL").value;
+  const linkTitle = document.getElementById("linkTitle").value;
+
   const linkContainer = document.querySelector(".quick-link-container");
 
   // If already added links are less than 4, user can add more links
   if (linkContainer.children.length < 4) {
-    const linkURL = prompt("Enter the URL:");
-    const linkTitle = prompt("Enter the title:");
-
     // Checks if the URL & title are submitted
     if (linkURL && linkTitle) {
       let fixedURL = linkURL;
@@ -98,6 +136,9 @@ const addLink = () => {
       // Adds remove function to remove button
       removeLinks();
 
+      // Hides the modal after adding the link
+      closeModal();
+
       // Alerts if user input is missing
     } else {
       alert("Please enter a URL and a title.");
@@ -106,8 +147,9 @@ const addLink = () => {
   } else {
     alert("You have reached the maximum number of quick links.");
   }
-};
-
-// Added onclick event listener to add links button for adding links
-const addLinkButton = document.querySelector(".add-link-btn");
-addLinkButton.addEventListener("click", addLink);
+  // Clears input fields in the modal after adding the link or if maximum links reached
+  document.getElementById("linkURL").value = "";
+  document.getElementById("linkTitle").value = "";
+  // Focus to the URL input
+  document.getElementById("linkURL").focus();
+});
