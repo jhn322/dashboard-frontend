@@ -35,6 +35,20 @@
 
         <!-- Quick links -->
         <div class="the-dashboard">
+
+            <!-- Modal for quick links input -->
+            <div id="quickModal" class="modal" style="display: none;">
+                <article class="modal-content">
+                    <span class="close">&times;</span>
+                    <input type="text" id="linkURL" placeholder="Enter a URL">
+                    <input type="text" id="linkTitle" placeholder="Enter a title">
+                    <button id="modalAdd">Add Link</button>
+                </article>
+            </div>
+
+            <!-- Background for webpage when modal is active -->
+            <div id="overlay"></div>
+
             <div>
                 <article class="dash-element dash-element-1">
                     <h2 class="dash-element-headline dash-element-headline-1">Quick links</h2>
