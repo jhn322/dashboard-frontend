@@ -23,6 +23,7 @@ p,
 button,
 textarea {
   font-family: "Montserrat", sans-serif;
+  color: #dedbd7;
 }
 
 /* Container for the clock element */
@@ -31,10 +32,7 @@ textarea {
   display: flex;
   justify-content: center;
   border-radius: 10px;
-  background: linear-gradient(
-    rgba(128, 128, 128, 0.3),
-    rgba(128, 128, 128, 0.3)
-  );
+  background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5));
   backdrop-filter: blur(10px);
   cursor: default;
 }
@@ -80,7 +78,7 @@ textarea {
 }
 
 #dashboardHeadline:hover {
-  color: rgba(25, 25, 25, 0.8);
+  color: #908e8c;
 }
 
 /* Styling for the input field & text from JS */
@@ -89,10 +87,8 @@ textarea {
   text-align: center;
   font-size: 2rem;
   border-radius: 10px;
-  background: linear-gradient(
-    rgba(128, 128, 128, 0.3),
-    rgba(128, 128, 128, 0.3)
-  );
+  color: #dedbd7;
+  background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5));
   backdrop-filter: blur(10px);
   border: none;
   outline: none;
@@ -121,10 +117,7 @@ textarea {
   width: 28rem;
   align-items: center;
   flex-direction: column;
-  background: linear-gradient(
-    rgba(128, 128, 128, 0.3),
-    rgba(128, 128, 128, 0.3)
-  );
+  background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5));
   backdrop-filter: blur(10px);
 }
 
@@ -133,14 +126,19 @@ textarea {
   text-align: center;
 }
 
+.modal input[type="text"] {
+  color: #dedbd7;
+}
+
 /* Close modal button */
 .close {
   position: absolute;
-  top: 1px;
+  top: -2px;
   right: 10px;
-  font-size: 30px;
+  font-size: 34px;
   cursor: pointer;
   transition: 0.4s;
+  color: #dedbd7;
 }
 
 .close:hover {
@@ -172,7 +170,7 @@ textarea {
 
 #linkURL::placeholder,
 #linkTitle::placeholder {
-  color: rgba(25, 25, 25, 0.8);
+  color: #dedbd7;
   font-size: 1.5rem;
 }
 
@@ -189,7 +187,7 @@ textarea {
   font-size: 0.9rem;
   border: none;
   cursor: pointer;
-  color: rgba(240, 240, 240, 0.8);
+  color: #dedbd7;
   background: linear-gradient(
     rgba(128, 128, 128, 0.3),
     rgba(128, 128, 128, 0.3)
@@ -224,10 +222,7 @@ textarea {
   align-items: center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   flex-direction: column;
-  background: linear-gradient(
-    rgba(128, 128, 128, 0.3),
-    rgba(128, 128, 128, 0.3)
-  );
+  background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5));
   backdrop-filter: blur(10px);
 }
 
@@ -255,10 +250,7 @@ textarea {
   align-items: center;
   width: 21rem;
   height: 4.5rem;
-  background: linear-gradient(
-    rgba(255, 255, 255, 0.6),
-    rgba(255, 255, 255, 0.6)
-  );
+  background: linear-gradient(rgba(40, 40, 40, 0.6), rgba(40, 40, 40, 0.6));
   backdrop-filter: blur(10px);
   margin-bottom: 0.5rem;
   border-radius: 10px;
@@ -309,7 +301,7 @@ textarea {
 }
 
 .quick-link h3:hover {
-  color: rgba(25, 25, 25, 0.8);
+  color: #908e8c;
 }
 
 /* Remove link minus icon position */
@@ -322,7 +314,7 @@ textarea {
 }
 
 .fa-circle-minus::before {
-  color: rgba(70, 70, 70, 0.5);
+  color: rgba(200, 200, 200, 0.5);
   transition: 0.4s;
 }
 
@@ -350,20 +342,17 @@ textarea {
   flex-direction: column;
   width: 21rem;
   height: 4.5rem;
-  background: linear-gradient(
-    rgba(255, 255, 255, 0.6),
-    rgba(255, 255, 255, 0.6)
-  );
+  background: linear-gradient(rgba(40, 40, 40, 0.6), rgba(40, 40, 40, 0.6));
   backdrop-filter: blur(10px);
   margin-bottom: 0.5rem;
   border-radius: 10px;
   cursor: default;
-  transition: opacity 0.4s ease-out;
+  transition: 0.4s ease-out;
 }
 
-/* Zoom weather elements */
+/* Hover weather elements */
 .weather:hover {
-  opacity: 0.8;
+  background-color: rgba(220, 220, 220, 0.6);
 }
 
 /* P tags on the same row */
@@ -411,11 +400,11 @@ textarea {
 
 /* White color for Pokémon text */
 #pokemonData > p {
-  color: rgba(240, 240, 240, 0.8);
+  color: #dedbd7;
 }
 
 #pokemonData > h3 {
-  color: rgba(240, 240, 240, 0.8);
+  color: #dedbd7;
 }
 
 /* Pokémon image size */
@@ -432,15 +421,12 @@ textarea {
 
 /* Styling for notes textarea */
 .notes-area {
-  background: linear-gradient(
-    rgba(255, 255, 255, 0.6),
-    rgba(255, 255, 255, 0.6)
-  );
+  background: linear-gradient(rgba(40, 40, 40, 0.6), rgba(40, 40, 40, 0.6));
   backdrop-filter: blur(10px);
   border-radius: 10px;
   border: none;
   outline: none;
-  font-size: 1rem;
+  font-size: 1.2rem;
   width: 95%;
   height: 70%;
   resize: none;
@@ -462,8 +448,8 @@ textarea {
   font-size: 0.9rem;
   border: none;
   cursor: pointer;
-  color: rgba(240, 240, 240, 0.8);
-  background: linear-gradient(rgba(70, 70, 70, 0.5), rgba(70, 70, 70, 0.5));
+  color: #dedbd7;
+  background: linear-gradient(rgba(40, 40, 40, 0.6), rgba(40, 40, 40, 0.6));
   backdrop-filter: blur(10px);
   transition: 0.4s;
   gap: 10px;
@@ -479,7 +465,7 @@ textarea {
 #notes-delete-btn i::before,
 .bg-btn .fa-solid.fa-arrow-rotate-right::before {
   font-size: 16px;
-  color: rgba(240, 240, 240, 0.8);
+  color: #dedbd7;
 }
 
 /* Hover all buttons */
