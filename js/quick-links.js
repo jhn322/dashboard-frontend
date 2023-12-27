@@ -36,7 +36,7 @@ const removeLinks = () => {
 // Arrow function to check if there are already 4 links saved
 const linkLimit = () => {
   const linkContainer = document.querySelector(".quick-link-container");
-  return linkContainer.children.length >= 4;
+  return linkContainer.children.length >= 8;
 };
 
 // Function to allow "Enter" key press on the modal input fields to confirm
@@ -98,7 +98,7 @@ modalAddBtn.addEventListener("click", () => {
   const linkContainer = document.querySelector(".quick-link-container");
 
   // If already added links are less than 4, user can add more links
-  if (linkContainer.children.length < 4) {
+  if (linkContainer.children.length < 8) {
     // Checks if the URL & title are submitted
     if (linkURL && linkTitle) {
       let fixedURL = linkURL;
